@@ -1,0 +1,17 @@
+Question:  Difference between HTTP 1.1 vs HTTP 2
+Answer:
+       	  	               HTTP 1.1						                                    	HTTP 2
+       	  ------------------------------------------------------------------------------------------------------------
+       	  1. HTTP 1.1 can send single requests for data			            1. HTTP 2 can send multiple requests for data
+       	     in parallel over a single TCP connection. 			               in parallel over a single TCP connection. 
+       	  2. HTTP 1.1 can't compress a large number of 			            2. HTTP 2 compress a large number of redundant
+       	     redundant header frames.					                             header frames.
+       	  3. HTTP 1.1 used to process text commands to			            3. HTTP 2 will use binary commands (in 1s and
+       	     complete request-response cycles.				                     0s) to execute the same tasks.
+       	  4. No task prioritization.					                          4. Task prioritization exists.
+       	  5. Server push is not done here.				                      5. Server push is done here.
+        
+        
+        
+Question:  Write a about objects and its internal representation in Javascript
+Answer:    
