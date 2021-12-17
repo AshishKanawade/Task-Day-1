@@ -15,3 +15,47 @@ Answer:
         
 Question:  Write a about objects and its internal representation in Javascript
 Answer:    
+       Objects are the representation of real-world entities in any language representing things by defining its properties along with their values.
+	In Javascript, objects may be defined as an unordered collection of "Key:value" pairs.
+
+	Ways to create an object:
+       
+	a) Object literal:
+		object literal is a comma-separated list of name-value pairs wrapped in curly braces.
+		Eg:
+			var first = {"name":"Ashish","age":24,”country”:”India”};
+
+	b) Object.create():
+		The method creates a new object, using an existing object as the prototype of the newly created object.
+		Eg:
+			var second = Object.create(first);
+			second.name = "Atharva";
+			second.age = 25;
+
+       c) Object constructor
+		This is used to create multiple objects of similar type. In this case, a constructor is created and multiple objects can be initialized using the new keyword using the constructor as a wrapper for the newly created objects.
+		Eg.
+			Construction function-
+			function student(name,age)	
+			{
+				this.name=name;
+				this.age=age;
+			}
+			Creating objects using constructor-
+			var s1=new student("kiran",20);
+			var s2=new student("ravi",19);
+	
+	d) Object.assign()
+		It is used to copy the values and properties from one or more source objects to a target object. It invokes getters and setters since it uses both [[Get]] on the source and [[Set]] on the target.
+		Eg:
+		var ob1={age:20};
+		var ob2={age:19};
+		var ob3=Object.assign(ob1,ob2);
+		console.log(ob3);//{age:20,age:19};
+
+	e) Object.fromEntries
+		This method transforms a list of key-value pairs into an object.
+		Eg.
+		var ex1=new person(["name":"kiran","age":20]);
+		var ex2=Object.fromEntries(person);
+		console.log(ex2);//{"name":"kiran","age":20}
